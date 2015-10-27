@@ -35,6 +35,7 @@ public class TestWordPress {
         caps.setBrowserName(System.getenv("SELENIUM_BROWSER"));
         caps.setVersion(System.getenv("SELENIUM_VERSION"));
         caps.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
+        caps.setBrowserName(System.getenv("JENKINS_BUILD_NUMBER"));
         driver = new RemoteWebDriver(new URL(url), caps);
 
         baseUrl = "http://localhost:8080/";
